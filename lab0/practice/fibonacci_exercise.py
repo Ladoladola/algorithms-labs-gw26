@@ -5,9 +5,15 @@ def fibonacci(n):
     if n < 0:
         raise ValueError("Fibonacci is not defined for negative integers")
 
-    # TODO: Add the base case. Note: Fib(0) is 0; Fib(1) is 1; Fib(2) is 1, so on.
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    elif n == 2:
+        return 1
 
-    # TODO: Return fibonacci: 
+    return fibonacci(n - 1) + fibonacci(n - 2)
+
     raise NotImplementedError("Complete fibonacci")
 
 
@@ -18,9 +24,10 @@ def main():
     
     # See what happens when you try this:
     # print(f"Fib(50) = {fibonacci(50)}")  # Expected: 12,586,269,025 (Python can handle this number)
-    
-    # Why does it happen? What is the time complexity of this implementation? How can we improve it?
+    print(f"Fib(50) = {fibonacci(50)}")
 
+    # Why does it happen? What is the time complexity of this implementation? How can we improve it?
+    
 
 if __name__ == "__main__":
     main()
