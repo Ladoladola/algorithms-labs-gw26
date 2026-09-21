@@ -83,8 +83,8 @@ def bubble_sort(arr):
 > | **Exit** | Did any swaps occur in Pass 4? Explain early stopping: | | | `[                      ]` | **Sorted!** |
 > 
 > ```text
-> Total Comparisons performed: 
-> Total Swaps performed: 
+> Total Comparisons performed: 14
+> Total Swaps performed: 6
 > ```
 > *(Tip: You can verify your trace by running `python sorting_trace.py`)*
 
@@ -126,8 +126,8 @@ def insertion_sort(arr):
 > | **$i=4$ (TODO)** | `2` | | | `[               ]` | `[               ]` |
 > 
 > ```text
-> Total Comparisons performed: 
-> Total Shifts performed: 
+> Total Comparisons performed: 8
+> Total Shifts performed: 6
 > ```
 
 ---
@@ -147,9 +147,9 @@ A sorting algorithm is **stable** if elements with equal keys appear in the outp
 > TODO 1.3A (Inversions & Shifts):
 > List all inversions (pairs of indices (i, j) where i < j and arr[i] > arr[j])
 > in the initial array [7, 3, 5, 8, 2]:
-> - Inversions: 
-> - Total number of inversions: 
-> - Does this total exactly equal the number of shifts you counted in Task 1.2? (Yes/No): 
+> - Inversions: (0,1), (0,2), (0,4), (1,4), (2,4), (3,4)
+> - Total number of inversions: 6
+> - Does this total exactly equal the number of shifts you counted in Task 1.2? (Yes/No): yes
 > 
 > TODO 1.3B (Early Stopping Flag):
 > Why does Bubble Sort require an explicit boolean flag (`swapped`) to achieve
@@ -222,9 +222,9 @@ At the beginning of each iteration of the `for j` loop, the array is partitioned
 > | **End (TODO)**| - | - | Swap $arr[i+1]$ with $arr[high]$: | | `[                       ]` | **Final Pivot Index:** | |
 > 
 > ```text
-> Resulting Left Subarray (<= 4): 
-> Resulting Pivot Index and Value: 
-> Resulting Right Subarray (> 4): 
+> Resulting Left Subarray (<= 4): (2,1,3)
+> Resulting Pivot Index and Value: 3
+> Resulting Right Subarray (> 4): (8,7,5,6)
 > ```
 > *(Tip: You can verify your trace by running `python lomuto_partition.py`)*
 
@@ -258,9 +258,9 @@ python lomuto_partition.py
 > ```text
 > TODO 2.2A:
 > If arr = [5, 5, 5, 5, 5] is partitioned using Lomuto partition (pivot = 5):
-> - What will the final value of i be at the end of the loop?
-> - What index will the pivot end up at?
-> - What are the sizes of the two recursive subproblems passed to quicksort?
+> - What will the final value of i be at the end of the loop? i = 3
+> - What index will the pivot end up at? i = 4
+> - What are the sizes of the two recursive subproblems passed to quicksort? left 4 right 0
 > A:
 > 
 > TODO 2.2B:
