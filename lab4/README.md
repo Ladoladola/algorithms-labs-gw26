@@ -154,11 +154,11 @@ traversal of the tree after insertion. The first two rows are worked.
 |---|---|---|---|
 | 40 | None (Root) | Root | `[40]` |
 | 20 | 40 | Left | `[20, 40]` |
-| 60 | TODO | TODO | TODO |
-| 10 | TODO | TODO | TODO |
-| 30 | TODO | TODO | TODO |
-| 50 | TODO | TODO | TODO |
-| 70 | TODO | TODO | TODO |
+| 60 | 40 | right | `[20, 40, 60]` |
+| 10 | 20 | left | `[10, 20, 40, 60]` |
+| 30 | 20 | right | `[10, 20, 30, 40, 60]` |
+| 50 | 60 | left | `[10, 20, 30, 40, 50, 60]` |
+| 70 | 60 | right | `[10, 20, 30, 40, 50, 60, 70]` |
 
 ### 1.2 Trace: Deletion
 
@@ -177,8 +177,8 @@ worked.
 | Target key | Deletion case | Successor key | Node spliced / replaced | In-order traversal afterward |
 |---|---|---|---|---|
 | 10 | 0 children (leaf) | None | 10 | `[20, 30, 40, 50, 60, 70]` |
-| 20 | TODO | TODO | TODO | TODO |
-| 40 | TODO | TODO | TODO | TODO |
+| 20 | 1 child | 30 | 20 | `[30, 40, 50, 60, 70]` |
+| 40 | 2 children | 50 | 40 | `[30, 50, 60, 70]` |
 
 ### 1.3 Implementation
 
